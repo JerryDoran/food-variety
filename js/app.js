@@ -1,0 +1,16 @@
+const icons = [...document.querySelectorAll('.section-1-icons i')];
+let counter = 1;
+
+setInterval(() => {
+  counter += 1;
+  const icon = document.querySelector('.change');
+
+  icon.classList.remove('change');
+
+  if (counter > icons.length) {
+    icons[0].classList.add('change');
+    counter = 1;
+  } else {
+    icon.nextElementSibling.classList.add('change');
+  }
+}, 3000);
