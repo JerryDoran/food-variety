@@ -1,9 +1,17 @@
+const menu = document.querySelector('.menu');
+
+menu.addEventListener('click', () => {
+  document.querySelectorAll('.target').forEach((item) => {
+    item.classList.toggle('change');
+  });
+});
+
 const icons = [...document.querySelectorAll('.section-1-icons i')];
 let counter = 1;
 
 setInterval(() => {
   counter += 1;
-  const icon = document.querySelector('.change');
+  const icon = document.querySelector('.section-1-icons .change');
 
   icon.classList.remove('change');
 
